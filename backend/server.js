@@ -2,7 +2,7 @@ const express = require("express");
 const fs = require("fs");
 const path = require("path");
 const app = express();
-const PORT = 3000;
+const PORT = 8080;
 const upload = require("express-fileupload");
 
 const FE_FS_PATH = path.join(__dirname, "..", "frontend");
