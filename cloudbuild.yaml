@@ -1,9 +1,9 @@
 steps:
 - name: 'node:18.15.0'
   entrypoint: 'npm'
-  args: ['install']  # Függőségek telepítése
-  dir: '/workspace'  # A helyes könyvtár megadása
+  args: ['install'] 
+  dir: '/backend'
 - name: 'node:18.15.0'
   entrypoint: 'npm'
-  args: ['run', 'build']  # Projekt buildelése
-  dir: '/workspace'  # A helyes könyvtár megadása
+  args: ['run', 'build'] 
+  dir: '/backend'
