@@ -1,0 +1,15 @@
+{
+  "status": "active",
+  "id": 5,
+  "date": "202306211700",
+  "formData": {
+    "FullName": "Lázok Márió",
+    "Zip-Code": "5600",
+    "City": "Békéscsaba",
+    "street": "Haán Lajos Tér",
+    "Number": "3",
+    "e-mail": "lazokmarios7@gmail.com",
+    "Phone": "+36306987672",
+    "Product": "CappuccinoAmount: 27Total price: 54$EspressoAmount: 6Total price: 6$AmericanoAmount: 3Total price: 3$LatteAmount: 4Total price: 8$Caffè mochaAmount: 2Total price: 4$Flat whiteAmount: 1Total price: 2$"
+  }
+}
