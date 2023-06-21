@@ -7,3 +7,5 @@ steps:
   entrypoint: 'npm'
   args: ['run', 'build'] 
   dir: '/'
+- name: 'gcr.io/k8s-skaffold/pack'
+  args: ['build', '-b', 'gcr.io/paketo-buildpacks/nodejs']
