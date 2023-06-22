@@ -121,7 +121,7 @@ app.post("/coffee/", (req, res) => {
     return res.status(400).send("Missing form data.");
   }
 
-  fs.readFile(path.join(__dirname, coffeesFilePath), "utf8", (err, data) => {
+  fs.readFile(coffeesFilePath, "utf8", (err, data) => {
     if (err) {
       console.log(err);
       return res.status(500).send("Error: Unable to read file.");
@@ -153,8 +153,7 @@ app.post("/coffee/", (req, res) => {
     coffeeData.components = comps;
     coffees.push(coffeeData);
 
-    fs.writeFile(
-      path.join(__dirname, coffeesFilePath),
+    fs.writeFile(coffeesFilePath,
       JSON.stringify(coffees, null, 2),
       "utf8",
       (err) => {
@@ -211,7 +210,7 @@ app.post("/coffee/:id/comps/:compId/value/:value", (req, res) => {
   const componentId = parseInt(req.params.compId);
   const modifiedData = req.params.value;
 
-  fs.readFile(path.join(__dirname, coffeesFilePath), "utf8", (err, data) => {
+  fs.readFile(coffeesFilePath, "utf8", (err, data) => {
     if (err) {
       console.log(err);
       return res.status(500).send("Error: Unable to read file.");
@@ -241,8 +240,7 @@ app.post("/coffee/:id/comps/:compId/value/:value", (req, res) => {
 
     component[1] = modifiedData;
 
-    fs.writeFile(
-      path.join(__dirname, coffeesFilePath),
+    fs.writeFile(coffeesFilePath,
       JSON.stringify(products, null, 2),
       "utf8",
       (err) => {
