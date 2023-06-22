@@ -387,7 +387,7 @@ app.put("/orders/status/:status/:id", (req, res) => {
 });
 
 app.get("/coffees", (req, res) => {
-  fs.readFile("coffees.json", "utf8", (err, data) => {
+  fs.readFile(coffeesFilePath, "utf8", (err, data) => {
     if (err) {
       console.error(err);
       return res.status(500).send("Error retrieving coffees");
@@ -401,7 +401,7 @@ app.get("/coffees", (req, res) => {
 app.get("/coffees/:id", (req, res) => {
   const id = parseInt(req.params.id);
 
-  fs.readFile("coffees.json", "utf8", (err, data) => {
+  fs.readFile(coffeesFilePath, "utf8", (err, data) => {
     if (err) {
       console.error(err);
       return res.status(500).send("Error retrieving coffees");
