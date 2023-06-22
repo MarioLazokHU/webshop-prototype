@@ -80,7 +80,6 @@ export function createAdminPage() {
   btnCon.append(productLink, ordersLink, back);
   header.append(h1, btnCon);
   newCoffee.append(
-    conTitle,
     coffeeName,
     coffeeDesc,
     components,
@@ -89,6 +88,6 @@ export function createAdminPage() {
     button
   );
   delForm.append(h2Del, delInput, delBtn);
-  con.append(newCoffee);
+  con.append(conTitle, newCoffee);
   root.append(header, con, avProdListCon, orderListCon);
 }
