@@ -2,10 +2,10 @@ import { createEl } from "../utils/utils.js";
 import { addToCart, getCartItems, clearCartData } from "./cart.js";
 
 export function formHandler() {
-  const buttons = document.querySelectorAll(".add");
-
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
+  const leftContainer = document.querySelector("#left-container");
+  leftContainer.addEventListener("click", (event) => {
+    if (event.target.classList.contains("add")) {
+      const button = event.target;
       const form = document.querySelector("form");
       const amountInputs = document.querySelectorAll(
         "#left-container > div > div > input"
@@ -76,6 +76,6 @@ export function formHandler() {
           cartCon.appendChild(itemContainer);
         });
       }
-    });
+    }
   });
 }

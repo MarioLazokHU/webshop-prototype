@@ -48,9 +48,8 @@ export async function fillCardsData() {
       cardContainer.prepend(img, container);
       cardContainer.prepend(h1, h5, h4);
       leftContainer.appendChild(cardContainer);
-
-      formHandler();
-      refreshAmInput();
     }
   });
+  formHandler();
+  refreshAmInput();
 }
