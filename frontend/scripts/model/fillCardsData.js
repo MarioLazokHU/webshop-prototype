@@ -42,7 +42,8 @@ export async function fillCardsData() {
       const h1 = createEl("h1", { textContent: coffee.name });
       const h5 = createEl("h5", { textContent: coffee.type });
       const h6 = createEl("h6", { textContent: coffee.price });
-
+      
+      
       container.append(h6, input, button);
       cardContainer.prepend(img, container);
       cardContainer.prepend(h1, h5, h4);
