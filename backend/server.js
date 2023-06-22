@@ -9,7 +9,7 @@ const FE_FS_PATH = path.join(__dirname, "..", "frontend");
 const ordersFilePath = path.join(__dirname, "data");
 const coffeePicturesDir = path.join(__dirname, "media");
 const loginPath = path.join(__dirname, "admin.json");
-const coffeesFilePath = "coffees.json";
+const coffeesFilePath = path.join(__dirname,"coffees.json");
 
 app.use(express.static(FE_FS_PATH));
 app.use(express.json());
