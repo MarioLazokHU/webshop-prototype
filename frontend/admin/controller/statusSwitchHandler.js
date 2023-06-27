@@ -11,7 +11,7 @@ export function statusSwitchHandler() {
       });
 
       if (response.status === 202) {
-        getUpdatedOrder(id); // Új adatok lekérése a frissen módosított rendeléshez
+        getUpdatedOrder(id);
       }
     });
   });
